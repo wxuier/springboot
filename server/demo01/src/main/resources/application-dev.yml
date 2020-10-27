@@ -1,0 +1,21 @@
+#只能在yml文件中使用中文
+
+minMoney: 2
+description: 最少要发${minMoney}元
+
+limit:
+  minMoney: 0.01
+  maxMoney: 1000
+  description: 最少要发${limit.minMoney}元,最多发${limit.maxMoney}元
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/luckymoney?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

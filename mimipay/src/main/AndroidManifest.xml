@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="5.0.20" package="com.libra.mimipay">
+    <uses-sdk android:targetSdkVersion="26"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/favicon" android:name="com.libra.mimipay.MimiPayApplication" android:allowBackup="true" android:supportsRtl="true">
+        <activity android:name="com.libra.mimipay.StartupActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.libra.mimipay.MainActivity" android:launchMode="singleTask"/>
+        <activity android:name="com.libra.mimipay.LoginActivity"/>
+        <service android:name="com.libra.mimipay.BackgroundService" android:enabled="true" android:exported="true"/>
+        <service android:label="MMPay" android:name="com.libra.mimipay.NotifyService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.libra.mimipay.RobService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibility"/>
+        </service>
+        <service android:name="com.libra.mimipay.status.StatusJobScheduler" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.libra.mimipay.status.AlarmReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="status_service"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+        <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT"/>
+    </application>
+</manifest>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/colorMain" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="25dp" android:layout_marginRight="5dp" android:src="@mipmap/m"/>
+            <TextView android:textSize="12pt" android:textColor="@color/colorWhite" android:layout_gravity="center" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MM支付"/>
+            <TextView android:textColor="@color/colorPrimary" android:layout_gravity="center" android:id="@+id/model" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="调试"/>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="26dp">
+            <ImageView android:layout_gravity="center" android:id="@+id/user" android:layout_width="70dp" android:layout_height="70dp" android:src="@mipmap/user"/>
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_marginRight="70dp">
+                <TextView android:textSize="9pt" android:textColor="@color/colorWhite" android:id="@+id/username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="用户名"/>
+                <TextView android:textSize="6pt" android:textColor="@color/colorGray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="欢迎使用MM支付"/>
+            </LinearLayout>
+            <TextView android:textSize="6pt" android:textColor="@color/colorGray" android:layout_gravity="center" android:id="@+id/logout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/logout"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp">
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="设备名：" android:layout_weight="1"/>
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:id="@+id/device_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100"/>
+            </LinearLayout>
+            <View android:background="@color/colorSeparator" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp">
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="账户余额：" android:layout_weight="1"/>
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:id="@+id/balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100"/>
+            </LinearLayout>
+            <View android:background="@color/colorSeparator" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp">
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="程序状态：" android:layout_weight="1"/>
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:id="@+id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="等待用户支付"/>
+            </LinearLayout>
+            <View android:background="@color/colorSeparator" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp">
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="最后心跳时间：" android:layout_weight="1"/>
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:id="@+id/last_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2020/4/10 10:23"/>
+            </LinearLayout>
+            <View android:background="@color/colorSeparator" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp">
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="当前应用版本：" android:layout_weight="1"/>
+                <TextView android:textSize="7pt" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_version"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/new_app_group" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp">
+                    <TextView android:textSize="7pt" android:textColor="@color/colorRed" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="最新应用版本：" android:layout_weight="1"/>
+                    <TextView android:textSize="7pt" android:textColor="@color/colorRed" android:layout_gravity="center" android:id="@+id/new_app_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_version"/>
+                </LinearLayout>
+                <TextView android:textSize="7pt" android:textColor="@color/colorRed" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="请立即升级最新版本，否则有可能丢失订单！"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="8pt" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="2015-2020@MM Company"/>
+    </LinearLayout>
+</LinearLayout>

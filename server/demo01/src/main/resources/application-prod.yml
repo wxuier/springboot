@@ -1,0 +1,9 @@
+#只能在yml文件中使用中文
+
+minMoney: 2
+description: 最少要发${minMoney}元
+
+limit:
+  minMoney: 3
+  maxMoney: 1000
+  description: 最少要发${limit.minMoney}元,最多发${limit.maxMoney}元

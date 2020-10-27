@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        maven{ url 'https://mvn.shalltry.com/repository/maven-public'}
+        maven { url "https://mvn.shalltry.com/repository/base-snapshots/" }
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    maven{ url 'https://mvn.shalltry.com/repository/maven-public'}
+    maven { url "https://mvn.shalltry.com/repository/base-snapshots/" }
+    google()
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
+
+    defaultConfig {
+        applicationId 'com.libra.mimipay'
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.2.1'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    // some dependencies
+}

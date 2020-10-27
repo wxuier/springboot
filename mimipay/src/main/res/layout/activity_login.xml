@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/colorMain" android:paddingTop="30dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:layout_width="70dp" android:layout_height="60dp" android:layout_marginTop="10pt" android:src="@mipmap/m"/>
+        <TextView android:textSize="12pt" android:textColor="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10pt" android:text="MM支付" android:textAlignment="center"/>
+        <TextView android:textSize="8pt" android:textColor="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="个人收款服务专家" android:textAlignment="center"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="20dp" android:layout_marginRight="15dp">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户名"
+            android:text="voidsun"
+            android:textSize="10pt" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:text="wangjq793408"
+            android:textSize="10pt" />
+    </LinearLayout>
+    <Button android:textSize="10pt" android:textColor="@color/colorWhite" android:id="@+id/login" android:background="@drawable/button_shape" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="30dp" android:layout_marginRight="15dp" android:text="登录"/>
+</LinearLayout>
