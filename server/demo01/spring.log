@@ -1,0 +1,28 @@
+2020-10-22 21:02:18.563  INFO 12444 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on 10-A4012519 with PID 12444 (C:\Users\jiqing.wang\IdeaProjects\pays\demo01\build\classes\java\main started by jiqing.wang in C:\Users\jiqing.wang\IdeaProjects\pays\demo01)
+2020-10-22 21:02:18.566  INFO 12444 --- [main] com.example.demo.DemoApplication         : The following profiles are active: dev
+2020-10-22 21:02:19.178  INFO 12444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-22 21:02:19.254  INFO 12444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 1 JPA repository interfaces.
+2020-10-22 21:02:19.724  INFO 12444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-10-22 21:02:19.734  INFO 12444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-22 21:02:19.734  INFO 12444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-22 21:02:19.893  INFO 12444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2020-10-22 21:02:19.894  INFO 12444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1283 ms
+2020-10-22 21:02:20.068  INFO 12444 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-22 21:02:20.113  INFO 12444 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-22 21:02:20.169  INFO 12444 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-22 21:02:20.223  WARN 12444 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-22 21:02:20.401  INFO 12444 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-22 21:02:20.503  INFO 12444 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-22 21:02:20.697  INFO 12444 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-22 21:02:20.716  INFO 12444 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-10-22 21:02:20.741  INFO 12444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/demo'
+2020-10-22 21:02:20.744  INFO 12444 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-22 21:02:21.371  INFO 12444 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-22 21:02:21.379  INFO 12444 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-22 21:02:21.564  INFO 12444 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-22 21:02:21.573  INFO 12444 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 3.49 seconds (JVM running for 4.642)
+2020-10-22 21:02:22.016  INFO 12444 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-22 21:02:22.016  INFO 12444 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-22 21:02:22.025  INFO 12444 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-10-22 21:02:22.056  WARN 12444 --- [http-nio-8081-exec-1] com.example.demo.MainController          : home page now
+2020-10-22 21:02:23.443  WARN 12444 --- [http-nio-8081-exec-2] com.example.demo.MainController          : home page now
