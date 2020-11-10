@@ -39,12 +39,13 @@ public class GirlController {
 
     //POST http://localhost:8080/girl/girls1?age=33&cupSize=F
     @PostMapping("/girls1")
-    public Girl girlAdd(@Valid Girl girl, BindingResult bindingResult){
+    public Result<Girl> girlAdd(@Valid Girl girl, BindingResult bindingResult){
+        Result<Girl> result = new Result<>();
         if(bindingResult.hasErrors()){
-            System.out.println(bindingResult.getFieldError().getDefaultMessage());
-            return null;
+            return ResultUtil.error(1, bindingResult.getFieldError().getDefaultMessage());
         }
-        return resposiroey.save(girl);
+
+        return ResultUtil.success(resposiroey.save(girl));
     }
 
     @GetMapping("/girls/{id}")
@@ -80,5 +81,10 @@ public class GirlController {
     @GetMapping("/girls/two")
     public void girlTwo(){
         service.insertTwo();
+    }
+
+    @GetMapping("/girls/getage/{id}")
+    public void getAge(@PathVariable("id") Integer id) throws Exception {
+        service.getAge(id);
     }
 }

@@ -16,10 +16,14 @@ public class HttpAspect {
     private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
 
     @Pointcut("execution(public * com.example.girl.db.GirlController.list(..))")
-    public void log(){
-
+    public void list(){
     }
-    @Before("log()")
+
+    @Pointcut("execution(public * com.example.girl.db.GirlController.girlAdd(..))")
+    public void girlAdd(){
+    }
+
+    @Before("list()")
     public void doBefore(JoinPoint joinPoint){
 //        System.out.println("GirlController list is aspect before.");
         logger.info("GirlController list is aspect before.");
@@ -38,15 +42,21 @@ public class HttpAspect {
         logger.info("parameter = {}", joinPoint.getArgs());
     }
 
-    @After("log()")
+    @After("list()")
     public void doAfter(){
 //        System.out.println("GirlController list is aspect after.");
         logger.info("GirlController list is aspect after.");
     }
 
-    @AfterReturning(returning = "object", pointcut = "log()")
+    @AfterReturning(returning = "object", pointcut = "list()")
     public void doAfterReturning(Object object){
-        logger.info("response = {}", object);
+        logger.info("response = {}", object.toString());
+    }
+
+
+    @AfterReturning(returning = "object", pointcut = "girlAdd()")
+    public void doAfterReturning1(Object object){
+//        logger.info("response = {}", object.toString());
     }
 }
 

@@ -23,4 +23,20 @@ public class GirlService {
         girlB.setCupSize("DDD");
         resposiroey.save(girlB);
     }
+
+    public void getAge(Integer id) throws Exception {
+        Girl girl = resposiroey.getOne(id);
+        Integer age = girl.getAge();
+
+        if(age <= 10){
+            throw new GirlException(100, "你还在上小学吧");
+        }
+        else if(age < 60){
+            throw new GirlException(101, "你大于10岁了");
+        }
+    }
+
+    public Girl findOne(Integer id){
+        return  resposiroey.getOne(id);
+    }
 }
